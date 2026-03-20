@@ -1,0 +1,64 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    color: #1a1a1b;
+}
+
+.bg-main {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    background-attachment: fixed;
+}
+
+.bg-glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.card {
+    border: none;
+    border-radius: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.highlight {
+    border: 3px solid #ffc107 !important;
+    background: #fffdf5;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px rgba(255, 193, 7, 0.2); }
+    to { box-shadow: 0 0 20px rgba(255, 193, 7, 0.6); }
+}
+
+.history-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.score-display {
+    font-size: 2.5rem;
+    color: #2a5298;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+#section-stats {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+canvas {
+    width: 100% !important;
+}
